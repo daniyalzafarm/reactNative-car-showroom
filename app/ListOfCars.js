@@ -17,13 +17,17 @@ import colors from "./config/colors";
 function ListOfCars({ navigation }) {
   const [carsData, setCarsData] = useState();
   const [carKeys, setCarsKeys] = useState();
+
   const fetchData = async () => {
     const response = await fetch(
       "https://react-native-9ff35-default-rtdb.firebaseio.com/cars.json"
     );
+
     const cars = await response.json();
+
     var keys;
     var data;
+
     if (cars != null) {
       keys = Object.keys(cars);
       data = Object.values(cars);

@@ -7,7 +7,9 @@ import ManageCarsDisplay from "./ManageCarsDisplay";
 import { TouchableOpacity, View } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import CarDetailsScreen from "./CarDetailsScreen";
+
 const Stack = createStackNavigator();
+
 const ManageCars = ({ navigation }) => (
   <Stack.Navigator
     // Options for All Screens
@@ -25,6 +27,7 @@ const ManageCars = ({ navigation }) => (
         headerShown: false,
       }}
     />
+
     <Stack.Screen
       name="ListOfCars"
       component={ListOfCars}
@@ -52,6 +55,7 @@ const ManageCars = ({ navigation }) => (
         ),
       }}
     />
+
     <Stack.Screen
       name="CarDetailsScreen"
       component={CarDetailsScreen}
@@ -59,6 +63,7 @@ const ManageCars = ({ navigation }) => (
         title: "Car Details",
       }}
     />
+
     <Stack.Screen
       name="AddNewCar"
       component={AddNewCar}
